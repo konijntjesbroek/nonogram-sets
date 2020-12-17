@@ -1,0 +1,14 @@
+01234567890123456789012345678901234567890123456789012345678901234567890123456789
+          1         2         3         4         5         6         7
+2020-12-17 0030 Scrapped original code
+           0130 Created functional set creator for all possible combinations
+                given the current variable cells (this is 2**n possibilities,
+                where n == the number of cells with an unknown state)
+           0220 corrected the set creator so it would properly use copies of
+                of the current possible outcomes
+           0235 convert p_row and p_shape to sets of tuples and return the
+                intersect
+           0240 get rid of the sets and return a list of p_row elements found in
+                p_shape
+           0250 fork to new project from sandbox
+           0345 README and changelog built -- first commit
