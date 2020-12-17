@@ -12,3 +12,4 @@
                 p_shape
            0250 fork to new project from sandbox
            0345 README and changelog built -- first commit
+           0420 Cleaned up comments and added docstring for possible_rows()

@@ -1,24 +1,23 @@
-'''
-I need urgent help!!!!!!!!!!!!!!!
-
-So, I need a function, foo, that receives a row and constraints foo(row, const), and returns the combinations according to the order in the constraints list.
-
-The row contains the elements: 1, 0, or -1.
-
-1 - already colored
-
-0 - not colored
-
-\-1 - neutral (can be both colored and not colored)
-
-Few examples of the wanted output:
-
-    foo([1, 1, -1, 0], [3]) ---> [[1, 1, 1, 0]]  
-    foo([-1, 0, 1, 0, -1, 0], [1,1]) ---> [[0, 0, 1, 0, 1, 0], [1, 0, 1, 0, 0, 0]]  
-    foo([0, 0, -1, 1, 0] , [3]) ---> []
-    This is the code I have:
-'''
 def possible_rows(row, shape):
+    """
+01234567890123456789012345678901234567890123456789012345678901234567890123456789 
+          1         2         3         4         5         6         7
+        possible_rows:
+            given a nonogram row determine if the shape requested is valid and
+            return all possible combinations given the unknown cells (denoted by
+            a -1) and the requested shape.
+        expects:
+            row: (list) current cell states
+            shape: (list) widths of cells that should be in an on state, 
+                   separated by at least 1 space
+        returns:
+            list of values from possible rows (p_row) thare are also found in
+            the possible shapes (p_shape)
+        exceptions:
+            InvalidShape: if shape does not exist or does not fit within row.
+            No solutions: if there are no values from p_row within p_shape
+    """
+    
     p_row = [[],]
 
     if not shape or sum(shape) + len(shape) - 1 > len(row):
