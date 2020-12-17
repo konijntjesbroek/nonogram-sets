@@ -1,6 +1,4 @@
-01234567890123456789012345678901234567890123456789012345678901234567890123456789
-          1         2         3         4         5         6         7
-2020-12-17 0030 Scrapped original code
+020-12-17 0030 Scrapped original code
            0130 Created functional set creator for all possible combinations
                 given the current variable cells (this is 2**n possibilities,
                 where n == the number of cells with an unknown state)
@@ -13,3 +11,5 @@
            0250 fork to new project from sandbox
            0345 README and changelog built -- first commit
            0420 Cleaned up comments and added docstring for possible_rows()
+           0450 Split out the row and shape generation to separate functions
+                Added validation for row.
